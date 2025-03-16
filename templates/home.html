@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - AlertMe</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        function openPopup() {
+            document.getElementById("callPopup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("callPopup").style.display = "none";
+        }
+    </script>
+    <style>
+        /* Popup Modal Styling */
+        .popup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            min-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-button:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <div class="background-image-container"></div>
+        <div class="content-container">
+            <h1>Welcome to RSET Bus Alert System</h1>
+            
+            <a href="/alerts">Alerts</a>
+            <a href="/bus_schedule">Bus Schedule</a>
+            <a href="/fee_payment">Fee Payment</a>
+            <a href="/feedback">Feedback</a> 
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- Floating Call Button -->
+    <div class="floating-call-button" onclick="openPopup()">
+        <a href="javascript:void(0);" aria-label="Call our helpline">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="callPopup" class="popup-modal">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>Helpline Number</h2>
+            <p>📞 +91 93682 02662</p>
+        </div>
+    </div>
+
+</body>
+</html>

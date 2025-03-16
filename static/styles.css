@@ -1,0 +1,327 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../static/bus2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+
+.container, .login-container, .home-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+
+table {
+    width: 90%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+
+th {
+    font-weight: 600;
+}
+
+
+.alert-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+button, .back-button, a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover, .back-button:hover, a:hover {
+    background: #2980b9;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container, .login-container, .home-container {
+        width: 95%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+
+    table {
+        width: 100%;
+    }
+}
+
+
+/* Home Page Specific */
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background-image-container {
+    background: url('../static/rset.jpg') no-repeat center top;
+    background-size: 450px 200px;
+    height: 30vh;
+    opacity: 1;
+}
+
+
+.content-container {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.content-container h1 {
+    margin-bottom: 20px;
+}
+
+
+.content-container a {
+    display: block;
+    margin: 15px auto;
+    max-width: 200px;
+}
+
+/* ... (Your existing CSS) ... */
+
+.login-container form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+}
+
+.login-container input {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px 15px;
+    margin-bottom: 15px; /* Add space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.login-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+/* ... (Your existing styles.css) ... */
+
+/* Feedback Page Specific Styles */
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.feedback-card {
+    background: rgba(0, 0, 0, 0.75); /* Use same overlay color */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    width: 400px;
+    margin: 20px auto; /* Add margin for spacing */
+    box-sizing: border-box;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Add input background */
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+}
+select option {
+    background-color: white; /* Solid background for options */
+    color: black; /* Black text for readability */
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px 20px;
+    background: #3498db; /* Use consistent button color */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #2980b9; /* Consistent hover color */
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: white; /* Use consistent link color */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background: #3498db;
+}
+
+.back-button:hover {
+    background: #2980b9;
+}
+
+/* ... (Your existing styles.css) ... */
+
+/* Floating Call Button */
+.floating-call-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white; /* Keep the text color */
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-call-button a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.floating-call-button i {
+    font-size: 1rem;
+}
+
+.helpline-number {
+    display: none;
+    margin-left: 5px;
+}
+
+.floating-call-button i:hover + .helpline-number {
+    display: inline;
+}
+
+/* Popup Modal */
+.popup-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}

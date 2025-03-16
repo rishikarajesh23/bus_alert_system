@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bus Schedule - AlertMe</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Bus Schedule</h1>
+        <table>
+            <tr>
+                <th>Bus Number</th>
+                <th>Time</th>
+                <th>Route</th>
+            </tr>
+            {% for bus in bus_schedule %}
+            <tr>
+                <td>{{ bus.bus_number }}</td>
+                <td>{{ bus.time }}</td>
+                <td>{{ bus.route }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/home" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
